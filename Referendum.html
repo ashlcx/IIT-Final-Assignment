@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Referendum</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+    <meta name="Author" content="Ward Cunningham">
+    <meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+</head>
+
+<body>
+    <h1>Referendum</h1>
+    <p>To pass a referendum, a motion has to get more than half of the votes and more than half of the states.<br> A state is in favour if more than half of the voters are in favour.</p>
+    <p style="margin-top: 0; margin-bottom: 0">For this application you have to set values for <i>stateVotesFor</i> and
+        <i>stateVotesAgainst</i>, and expected values for <i>outcome()</i>.<br> <i>stateVotesFor</i> and <i>stateVotesAgainst</i> should be comma separated lists of whole numbers. Note that <i>outcome() </i> refers to passing or not the referendum.<br>        The two lists should be the same length.
+    </p>
+    <p style="margin-top: 0; margin-bottom: 0"><i>outcome()</i> should be Y or N.</p>
+    <p>Do not test for invalid data!!!</p>
+    <p>&nbsp;<strong>Notes:</strong><br> 1: There may be no errors to find.<br> 2: Description and coverage are important.
+        <br> 3: Avoid numbers in your description<br> 4: Do not write more than 10 tests. You will not need that many.&nbsp;
+        <p>
+            <table BORDER="1" cellSpacing="0" cellPadding="3">
+                <tr>
+                    <td colspan="4" height="28">Referendum.ReferendumFixture</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>stateVotesFor</td>
+                    <td>stateVotesAgainst</td>
+                    <TD><i>outcome()</i></TD>
+                </tr>
+                <tr>
+                    <td>Tie in states, more votes in favour</td>
+                    <td>110, 100, 95</td>
+                    <td>90, 100, 105</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Tie in states, less votes in favour</td>
+                    <td>70, 100, 127</td>
+                    <td>130, 100, 73</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Tie in states, tie in votes</td>
+                    <td>100, 100, 100</td>
+                    <td>100, 100, 100</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Loss in states, less votes in favour</td>
+                    <td>73, 89 ,65</td>
+                    <td>127, 111, 135</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Loss in states, more votes in favour</td>
+                    <td>199, 99, 99</td>
+                    <td>1, 101, 101</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Loss in states, tie in votes</td>
+                    <td>105, 99, 96</td>
+                    <td>95, 101, 104</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Win in states, less votes in favour</td>
+                    <td>103, 109, 12</td>
+                    <td>97, 91, 182</td>
+                    <TD>N</TD>
+                </tr>
+                <tr>
+                    <td>Win in states, more votes in favour</td>
+                    <td>110, 105, 140</td>
+                    <td>90, 95, 60</td>
+                    <TD>Y</TD>
+                </tr>
+                <tr>
+                    <td>Win in states, tie in votes</td>
+                    <td>105, 110, 85</td>
+                    <td>95,90,115</td>
+                    <TD>N</TD>
+                </tr>
+
+            </table>
+            <p>&nbsp;</p>
+            <p>Document prepared by Ashley Hines u3219476<br> University of Canberra
+            </p>
+</body>
+
+</html>
